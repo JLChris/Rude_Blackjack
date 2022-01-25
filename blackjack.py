@@ -166,11 +166,11 @@ def display_score(your_hand, dealer_hand):
 # Function to find the score of a hand
 def get_score(hand):
         total = 0
+        aces = [card for card in hand if card["name"] == "Ace"]
         for card in hand:
-            if card["name"] == "Ace":
-                total = total + 11 if total <= 10 else total + 1
-            else:
-                total += card["value"]
+            total += card["value"]
+        if len(aces) >= 1 and total + 10 <= 21:
+            total += 10
         return total
 
 # Function for the start of the game. The "home screen" if you will
