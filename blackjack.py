@@ -3,124 +3,160 @@ import random
 # Function to create the initial deck
 def generate_deck(num_decks = 1):
     new_deck = []
+    suits = ["Hearts", "Clubs", "Diamonds", "Spades"]
     for i in range(1, 14):
         new_cards = []
         # Specify the Ace, Jack, Queen, King. Maybe a cleaner way to do this?
         if i == 1:
+            # for suit in suits:
+            #     new_card = {
+            #         "name": "Ace",
+            #         "suit": suit,
+            #         "value": 1
+            #     }
+            #     new_cards.append(new_card)
             new_cards = new_cards + [
                 {
                     "name": "Ace",
                     "suit": "Hearts",
-                    "value": 1,
+                    "value": 1
                 },
                 {
                     "name": "Ace",
                     "suit": "Clubs",
-                    "value": 1,
+                    "value": 1
                 },
                 {
                     "name": "Ace",
                     "suit": "Diamonds",
-                    "value": 1,
+                    "value": 1
                 },
                 {
                     "name": "Ace",
                     "suit": "Spades",
-                    "value": 1,
-                }
+                    "value": 1
+                },
             ]
         elif i == 11:
+            # for suit in suits:
+            #     new_card = {
+            #         "name": "Jack",
+            #         "suit": suit,
+            #         "value": 10
+            #     }
+            #     new_cards.append(new_card)
             new_cards = new_cards + [
                 {
                     "name": "Jack",
                     "suit": "Hearts",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "Jack",
                     "suit": "Clubs",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "Jack",
                     "suit": "Diamonds",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "Jack",
                     "suit": "Spades",
-                    "value": 10,
-                }
+                    "value": 10
+                },
             ]
         elif i == 12:
+            # for suit in suits:
+            #     new_card = {
+            #         "name": "Queen",
+            #         "suit": suit,
+            #         "value": 10
+            #     }
+            #     new_cards.append(new_card)
             new_cards = new_cards + [
                 {
                     "name": "Queen",
                     "suit": "Hearts",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "Queen",
                     "suit": "Clubs",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "Queen",
                     "suit": "Diamonds",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "Queen",
                     "suit": "Spades",
-                    "value": 10,
-                }
+                    "value": 10
+                },
             ]
         elif i == 13:
+            # for suit in suits:
+            #     new_card = {
+            #         "name": "King",
+            #         "suit": suit,
+            #         "value": 10
+            #     }
+            #     new_cards.append(new_cards)
             new_cards = new_cards + [
                 {
                     "name": "King",
                     "suit": "Hearts",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "King",
                     "suit": "Clubs",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "King",
                     "suit": "Diamonds",
-                    "value": 10,
+                    "value": 10
                 },
                 {
                     "name": "King",
                     "suit": "Spades",
-                    "value": 10,
-                }
+                    "value": 10
+                },
             ]
         # For every number, create a card of each suit whose name and value is the number. 
         else:
+            # for suit in suits:
+            #     new_card = {
+            #         "name": str(i),
+            #         "suit": suit,
+            #         "value": i
+            #     }
+            #     new_cards.append(new_card)
             new_cards = new_cards + [
                 {
                     "name": str(i),
                     "suit": "Hearts",
-                    "value": i,
+                    "value": i
                 },
                 {
                     "name": str(i),
                     "suit": "Clubs",
-                    "value": i,
+                    "value": i
                 },
                 {
                     "name": str(i),
                     "suit": "Diamonds",
-                    "value": i,
+                    "value": i
                 },
                 {
                     "name": str(i),
                     "suit": "Spades",
-                    "value": i,
-                }
+                    "value": i
+                },
             ]
         new_deck = new_deck + new_cards
     new_deck = new_deck * num_decks # How many decks are mixing?
